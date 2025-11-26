@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Ritmo Diario</string>
+    <string name="hint_name">Ingresá tu nombre</string>
+    <string name="agenda_title">Ritmo Diario</string>
+    <string name="ir_a_agenda">Entrar a mi tablero</string>
+    <string name="btn_add_task">Nuevo bloque</string>
+
+    <string name="welcome_title">Organizá tu día con</string>
+    <string name="app_name_main_screen">Ritmo Diario</string>
+    <string name="calendar_icon_description">Icono de Calendario</string>
+    <string name="lets_start">Conectamos hábitos y objetivos</string>
+
+    <string name="app_footer_text">Edición verano 2025</string>
+
+    <string name="agenda_title_main">Tablero Ritmo</string>
+
+    <string name="help_button_description">Ayuda de la aplicación</string>
+    <string name="search_button_description">Botón de buscar</string>
+    <string name="back_button_description">Botón de retroceso</string>
+
+    <string name="help_activity_title">Guía de uso</string>
+
+    <string name="profile_title">Tu tablero personal</string>
+    <string name="profile_avatar_description">Ícono de perfil de usuario</string>
+    <string name="profile_welcome_template">Hola, %s 👋</string>
+    <string name="profile_task_count_template">Tenés %d bloques registrados.</string>
+    <string name="profile_first_task_date_template">Planificando desde: %s</string>
+    <string name="profile_no_tasks_recorded">Todavía no registraste bloques.</string>
+
+    <string name="action_profile">Perfil</string>
+
+    <string name="hint_task_title">Título del bloque</string>
+    <string name="hint_task_description">Detalle (opcional)</string>
+    <string name="hint_task_time">Hora (ej. 08:30)</string>
+
+    <string name="prev_day_description">Día anterior</string>
+    <string name="next_day_description">Día siguiente</string>
+
+    <string name="edit_task_description">Editar bloque</string>
+    <string name="delete_task_description">Eliminar bloque</string>
+
+    <string name="month_year_placeholder">Mes y Año</string>
+
+    <string name="add_task_label">Nuevo bloque</string>
+
+    <string name="decorative_circle_description">Elemento decorativo</string>
+
+    <string-array name="help_content_array">
+        <item>Hola, [USER_PLACEHOLDER]. Ritmo Diario es tu tablero rápido para coordinar hábitos reales.</item>
+        <item>1. Deslizar días:</item>
+        <item>Las flechas &lt; y &gt; cambian el día activo y actualizan la lista automáticamente.</item>
+        <item>2. Crear bloques:</item>
+        <item>El botón flotante + abre un diálogo para definir título, detalle y horario.</item>
+        <item>3. Editar o borrar:</item>
+        <item>Cada tarjeta tiene accesos directos para ajustar o eliminar el bloque.</item>
+        <item>4. Buscar:</item>
+        <item>La lupa permite filtrar por título o descripción en segundos.</item>
+        <item>---</item>
+        <item>Desarrollado por: Lucas Andreani</item>
+        <item>Materia: ACN4BV</item>
+        <item>Profe: Bruno Cano</item>
+        <item>---</item>
+        <item>Tecnologías:</item>
+        <item>Android Studio · Java · SQLite · RecyclerView · Fragments · Snackbar</item>
+    </string-array>
+
+    <string name="add_task_dialog_title">Nuevo bloque</string>
+    <string name="edit_task_dialog_title">Editar bloque</string>
+    <string name="save_button_text">Guardar</string>
+    <string name="update_button_text">Actualizar</string>
+    <string name="delete_button_text">Eliminar</string>
+    <string name="task_added_successfully">Bloque agregado.</string>
+    <string name="error_adding_task">No pudimos guardar el bloque.</string>
+    <string name="task_updated_successfully">Bloque actualizado.</string>
+    <string name="error_updating_task">No pudimos actualizar el bloque.</string>
+    <string name="task_deleted_successfully">Bloque eliminado.</string>
+    <string name="error_deleting_task">No pudimos eliminar el bloque.</string>
+    <string name="task_title_cannot_be_empty">Ingresá un título para el bloque.</string>
+    <string name="task_time_cannot_be_empty">Sumá una hora de referencia.</string>
+    <string name="task_time_invalid_format">Formato de hora no válido.</string>
+    <string name="delete_task_confirm_title">Eliminar bloque</string>
+    <string name="delete_task_confirm_message">¿Seguro que querés eliminar este bloque?</string>
+    <string name="no_tasks_for_today">No planificaste nada para hoy.</string>
+    <string name="no_tasks_found_for_search">No encontramos resultados para:</string>
+
+    <string name="search_dialog_title">Buscar bloques</string>
+    <string name="hint_search_task">Escribí para buscar…</string>
+    <string name="search_button_text">Buscar</string>
+    <string name="cancel_button_text">Cancelar</string>
+    <string name="searching_for">Buscando:</string>
+    <string name="search_cleared">Búsqueda reiniciada.</string>
+    <string name="search_cancelled">Búsqueda cancelada.</string>
+</resources>

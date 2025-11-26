@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.ACN4BVAndreaniPARCIAL_2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_primary_color</item>
+        <item name="colorPrimaryVariant">@color/md_primary_variant_color</item>
+        <item name="colorOnPrimary">@color/md_on_primary_color</item>
+
+        <item name="colorSecondary">@color/md_secondary_color</item>
+        <item name="colorSecondaryVariant">@color/md_secondary_variant_color</item>
+        <item name="colorOnSecondary">@color/md_on_secondary_color</item>
+
+        <item name="android:colorBackground">@color/md_background_color</item>
+        <item name="colorSurface">@color/md_surface_color</item>
+        <item name="colorError">@color/md_error_color</item>
+
+        <item name="colorOnBackground">@color/md_on_background_color</item>
+        <item name="colorOnSurface">@color/md_on_surface_color</item>
+        <item name="colorOnSurfaceVariant">@color/md_on_surface_variant_color</item>
+        <item name="colorOnError">@color/md_on_error_color</item>
+        <item name="colorOutline">@color/md_outline_color</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+</resources>

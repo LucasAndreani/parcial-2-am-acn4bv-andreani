@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_primary_color">#0F9D58</color>
+    <color name="md_primary_variant_color">#0B8043</color>
+    <color name="md_secondary_color">#F97316</color>
+    <color name="md_secondary_variant_color">#EA580C</color>
+    <color name="md_background_color">#F5F7FB</color>
+    <color name="md_surface_color">#FFFFFF</color>
+    <color name="md_error_color">#D90429</color>
+    <color name="md_outline_color">#CBD5E1</color>
+    <color name="md_on_primary_color">#FFFFFF</color>
+    <color name="md_on_secondary_color">#1C1917</color>
+    <color name="md_on_background_color">#1A202C</color>
+    <color name="md_on_surface_color">#1F2933</color>
+    <color name="md_on_surface_variant_color">#475467</color>
+    <color name="md_on_error_color">#FFFFFF</color>
+    <color name="task_icon_color">@color/md_secondary_color</color>
+    <color name="task_time_color">#0C4A6E</color>
+    <color name="task_edit_color">#38BDF8</color>
+    <color name="task_delete_color">@color/md_error_color</color>
+</resources>
