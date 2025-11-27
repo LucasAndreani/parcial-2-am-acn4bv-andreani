@@ -35,22 +35,21 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
     private ImageView btnPreviousDay;
     private ImageView btnNextDay;
 
-    private String currentSearchQuery = ""; // Variable para guardar la búsqueda actual
+    private String currentSearchQuery = "";
 
     private List<Task> tasksList;
     private TasksAdapter tasksAdapter;
     private DatabaseHelper db;
-    private Calendar currentCalendar; // para mantener el día seleccionado
+    private Calendar currentCalendar;
 
     public TasksListFragment() {
-        // Constructor vacío requerido para Fragments
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db = new DatabaseHelper(requireContext());
-        currentCalendar = Calendar.getInstance(); // inicializa con la fecha actual
+        currentCalendar = Calendar.getInstance();
         tasksList = new ArrayList<>();
     }
 
@@ -73,9 +72,8 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
         tasksAdapter = new TasksAdapter(requireContext(), tasksList, this);
         rvTasks.setAdapter(tasksAdapter);
 
-        // actualiza la ui de la fecha y carga las tareas para ese día
         updateDateDisplay();
-        loadTasks(); // Ahora llamará a la versión con filtro
+        loadTasks();
 
         fabAddTask.setOnClickListener(view -> showAddTaskDialog(null));
         btnPreviousDay.setOnClickListener(view -> changeDay(-1));
@@ -84,7 +82,6 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
         return v;
     }
 
-    // metodo para actualizar la visualizacion de la fecha en la ui
     private void updateDateDisplay() {
         SimpleDateFormat monthYearFormat = new SimpleDateFormat("MMMM yyyy", new Locale("es", "ES"));
         tvMonthYear.setText(monthYearFormat.format(currentCalendar.getTime()));
@@ -97,11 +94,9 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String currentDateString = dateFormat.format(currentCalendar.getTime());
 
-        // Obtiene todas las tareas para la fecha seleccionada
         List<Task> allTasksForDate = db.getTasksForDate(currentDateString);
         List<Task> filteredTasks = new ArrayList<>();
 
-        // aplica el filtro de busqueda si currentSearchQuery no está vacío
         if (!currentSearchQuery.isEmpty()) {
             for (Task task : allTasksForDate) {
                 if (task.getTitle().toLowerCase().contains(currentSearchQuery.toLowerCase()) ||
@@ -125,15 +120,13 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
     }
 
 
-    // cambia el día seleccionado y recarga las tareas
     private void changeDay(int daysToAdd) {
         currentCalendar.add(Calendar.DAY_OF_YEAR, daysToAdd);
         updateDateDisplay();
-        currentSearchQuery = ""; // Limpiar búsqueda al cambiar de dia
+        currentSearchQuery = "";
         loadTasks();
     }
 
-    // dialogo para añadir/editar tarea
     private void showAddTaskDialog(@Nullable Task taskToEdit) {
 
         View dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_add_task, null);
@@ -163,7 +156,7 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
 
                     if (title.isEmpty()) {
                         inputTitle.setError("El título no puede estar vacío");
-                        Snackbar.make(fabAddTask, R.string.task_title_cannot_be_empty, Snackbar.LENGTH_SHORT).show(); // Usa string resource
+                        Snackbar.make(fabAddTask, R.string.task_title_cannot_be_empty, Snackbar.LENGTH_SHORT).show();
                         return;
                     } else {
                         inputTitle.setError(null);
@@ -235,11 +228,11 @@ public class TasksListFragment extends Fragment implements TasksAdapter.OnTaskAc
     }
     public void filterTasksByText(String query) {
         this.currentSearchQuery = query;
-        loadTasks(); // recarga las tareas aplicando el filtro
+        loadTasks();
     }
 
     public void clearSearchFilter() {
         this.currentSearchQuery = "";
-        loadTasks(); // recarga las tareas sin filtro
+        loadTasks();
     }
 }
