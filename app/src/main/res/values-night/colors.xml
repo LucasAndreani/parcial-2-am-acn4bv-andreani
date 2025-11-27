@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF9C27B0</color>
+    <color name="purple_700">#FF6A1B9A</color>
+    <color name="teal_200">#FF00B8D4</color>
+    <color name="teal_700">#FF00838F</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="md_primary_color">#BB86FC</color>
+    <color name="md_primary_variant_color">#3700B3</color>
+    <color name="md_secondary_color">#03DAC6</color>
+    <color name="md_secondary_variant_color">#00838F</color>
+    <color name="md_background_color">#121212</color>
+    <color name="md_surface_color">#1E1E1E</color>
+    <color name="md_error_color">#CF6679</color>
+    <color name="md_outline_color">#424242</color>
+    <color name="md_on_primary_color">#000000</color>
+    <color name="md_on_secondary_color">#000000</color>
+    <color name="md_on_background_color">#FFFFFF</color>
+    <color name="md_on_surface_color">#FFFFFF</color>
+    <color name="md_on_surface_variant_color">#B0BEC5</color>
+    <color name="md_on_error_color">#000000</color>
+    <color name="task_icon_color">@color/md_primary_color</color>
+    <color name="task_time_color">@color/md_primary_color</color>
+    <color name="task_edit_color">@color/md_secondary_color</color>
+    <color name="task_delete_color">@color/md_error_color</color>
+</resources>
