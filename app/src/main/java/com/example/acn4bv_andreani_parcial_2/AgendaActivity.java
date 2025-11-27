@@ -5,18 +5,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-// import android.widget.TextView; // Este import no es necesario
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-// import android.widget.Toast; // Quitado para usar Snackbar
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.google.android.material.snackbar.Snackbar; // Asegúrate de tener este import
+import com.google.android.material.snackbar.Snackbar;
 
 public class AgendaActivity extends AppCompatActivity {
 
@@ -78,7 +75,7 @@ public class AgendaActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(AgendaActivity.this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Para limpiar la pila de actividades
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
         });
@@ -98,7 +95,7 @@ public class AgendaActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.search_button_text, (dialog, id) -> {
                     String searchText = editTextSearch.getText().toString().trim();
                     if (!searchText.isEmpty()) {
-                        tasksListFragment.filterTasksByText(searchText); // Llama al metodo de filtrado del fragment
+                        tasksListFragment.filterTasksByText(searchText);
                         Snackbar.make(findViewById(android.R.id.content), getString(R.string.searching_for) + " '" + searchText + "'", Snackbar.LENGTH_SHORT).show();
                     } else {
                         tasksListFragment.clearSearchFilter();

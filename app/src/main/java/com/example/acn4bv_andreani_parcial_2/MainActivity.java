@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editTextName;
     private Button btnIrAgenda;
-    private DatabaseHelper databaseHelper;
 
     private static final String PREF_NAME = "MyTaskAppPrefs";
     private static final String KEY_USER_NAME = "userName";
@@ -30,13 +28,11 @@ public class MainActivity extends AppCompatActivity {
         editTextName = findViewById(R.id.editTextName);
         btnIrAgenda = findViewById(R.id.btn_ir_agenda);
 
-        databaseHelper = new DatabaseHelper(this);
-
         SharedPreferences prefs = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         String savedUserName = prefs.getString(KEY_USER_NAME, "");
 
         if (!savedUserName.isEmpty()) {
-            editTextName.setText(savedUserName); // precargar el nombre si ya existe
+            editTextName.setText(savedUserName);
         }
 
         btnIrAgenda.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                // guardamo el nombre en SharedPreferences
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString(KEY_USER_NAME, userName);
                 editor.apply();
